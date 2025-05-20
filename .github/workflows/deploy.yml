@@ -44,17 +44,5 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v2
 
-      - name: Move files
-        run: mv out/* .
-        run: mv out/.* . 2>nul
-        run: rmdir out
-
-      - name: Add and commit files
-        run: git add .
-        run: git commit -m "Deploy static site to gh-pages"
-
-      - name: Push to gh-pages branch
-        run: git push -f origin gh-pages
-
       - name: Checkout master branch
         run: git checkout master 
