@@ -1,18 +1,36 @@
-import Image from "next/image";
+import React from 'react';
+import HeroSection from '../../components/HeroSection';
+import MissionVision from '../../components/MissionVision';
 
-export default function WhoWeAre() {
+const WhoWeArePage = () => {
+  const missionText = "Our mission is to empower organizations with transformative Artificial Intelligence solutions that drive innovation, enhance efficiency, and create sustainable growth.";
+  const visionText = "Our vision is to be a leading force in the AI consulting landscape, recognized for our expertise, integrity, and commitment to delivering impactful results for our clients across diverse industries.";
+  const valuesText = [
+    "Innovation: Embracing cutting-edge AI technologies and methodologies.",
+    "Integrity: Operating with transparency, ethics, and trust.",
+    "Excellence: Delivering high-quality solutions and services.",
+    "Collaboration: Partnering closely with clients to achieve shared goals.",
+    "Impact: Creating measurable and positive outcomes for organizations and society.",
+  ];
+
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-hpelight text-hpedark">
+      <HeroSection
+        title="Who We Are"
+        description="Learn about AI HUB LLC's mission, vision, and values."
+        // Optional: add imageUrl here if you want a background for the hero section
+      />
+
+      <MissionVision
+        mission={missionText}
+        vision={visionText}
+        values={valuesText}
+      />
+
       {/* Hero Section */}
       <section className="relative h-[40vh] bg-[#0a2342]">
         <div className="absolute inset-0">
-          <Image
-            src="/about-hero.jpg"
-            alt="AI HUB Team"
-            fill
-            className="object-cover opacity-20"
-            priority
-          />
+          {/* Optional: add imageUrl here if you want a background for the hero section */}
         </div>
         <div className="relative h-full flex items-center justify-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white text-center">
@@ -114,4 +132,6 @@ export default function WhoWeAre() {
       </section>
     </div>
   );
-} 
+};
+
+export default WhoWeArePage; 

@@ -1,26 +1,15 @@
-import Image from "next/image";
 import Link from 'next/link';
+import HeroSection from '../../components/HeroSection';
 
 export default function Solutions() {
   return (
     <div className="min-h-screen bg-hpelight">
       {/* Hero Section */}
-      <section className="relative h-[40vh] bg-hpedark">
-        <div className="absolute inset-0">
-          {/* Solutions hero image - Replace /public/images/smart-city-hero.jpg with a relevant high-quality, royalty-free image */}
-          <Image
-            src="/images/smart-city-hero.jpg" // Placeholder image
-            alt="Our Solutions"
-            fill
-            className="object-cover opacity-30"
-            priority
-          />
-          <div className="absolute inset-0 bg-hpedark bg-opacity-70"></div>
-        </div>
-        <div className="relative h-full flex items-center justify-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-white text-center">Our Solutions</h1>
-        </div>
-      </section>
+      <HeroSection
+        title="Our Solutions"
+        description="Innovative AI solutions tailored to your needs."
+        imageUrl="/images/smart-city-hero.jpg" // Placeholder image
+      />
 
       {/* Introduction Section */}
       <section className="py-20 bg-hpelight text-hpedark">
