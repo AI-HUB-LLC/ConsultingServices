@@ -1,11 +1,13 @@
 const express = require('express');
 const cors = require('cors');
 const nodemailer = require('nodemailer');
+const path = require('path');
 const app = express();
 
 // Middleware
 app.use(cors());
 app.use(express.json());
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Email configuration
 const transporter = nodemailer.createTransport({
@@ -44,6 +46,11 @@ app.post('/api/contact', async (req, res) => {
     console.error('Error sending email:', error);
     res.status(500).json({ message: 'Error sending message. Please try again.' });
   }
+});
+
+// Serve index.html for all routes
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 const PORT = process.env.PORT || 5000;
