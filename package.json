@@ -4,7 +4,7 @@
   "homepage": "https://ai-hub-llc.github.io/ConsultingServices",
   "scripts": {
     "start": "node server.js",
-    "build": "react-scripts build", 
+    "build": "npm run build", 
     "deploy": "gh-pages -d build"
   },
   "dependencies": {
