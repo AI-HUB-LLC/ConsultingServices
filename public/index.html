@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <base href="https://ai-hub-llc.github.io/ConsultingServices/">
+    <!-- <base href="https://ai-hub-llc.github.io/ConsultingServices/"> -->
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -18,6 +18,7 @@
             e.preventDefault();
             const formData = new FormData(e.target);
             try {
+                // TODO: Replace 'https://your-backend-url.com/api/contact' with the actual backend URL once the backend is hosted.
                 const response = await fetch('https://your-backend-url.com/api/contact', {
                     method: 'POST',
                     body: JSON.stringify(Object.fromEntries(formData)),
