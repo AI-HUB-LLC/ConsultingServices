@@ -58,7 +58,7 @@ const StyledForm = styled(Form)`
   }
 `;
 
-const StyledButton = styled(Button)`
+const StyledButton = styled(Button)<any>`
   background-color: #27ae60;
   border-color: #27ae60;
   padding: 0.8rem 2rem;
