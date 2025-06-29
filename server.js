@@ -7,7 +7,7 @@ const app = express();
 // Middleware
 app.use(cors());
 app.use(express.json());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'build')));
 
 // Email configuration
 const transporter = nodemailer.createTransport({
@@ -50,7 +50,7 @@ app.post('/api/contact', async (req, res) => {
 
 // Serve index.html for all routes
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
 const PORT = process.env.PORT || 5000;

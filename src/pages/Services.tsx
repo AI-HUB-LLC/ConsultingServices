@@ -74,7 +74,7 @@ const ServiceItem = styled.li`
   line-height: 1.6;
 `;
 
-const StyledButton = styled(Button)`
+const StyledButton = styled(Button)<any>`
   background-color: #27ae60;
   border-color: #27ae60;
   width: 100%;
