@@ -37,7 +37,7 @@ const ButtonGroup = styled(motion.div)`
   justify-content: center;
 `;
 
-const StyledButton = styled(Button)`
+const StyledButton = styled(Button)<any>`
   padding: 0.8rem 2rem;
   font-weight: 600;
   border-radius: 30px;
